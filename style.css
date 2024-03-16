@@ -1,0 +1,333 @@
+:root {
+    --mainRedLight: rgb(212, 14, 14);
+    --mainRedDark: rgb(146, 10, 10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .scroollogo {
+    position: sticky;
+    z-index: 500;
+    left: 50px;
+}
+
+.scroollogo img {
+    height: 40px;
+} */
+
+.bgVideo {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.548);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+    .bgVideo {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media (max-aspect-ratio:16/9) {
+    .bgVideo {
+        width: auto;
+        height: 100%;
+    }
+
+}
+
+.nav-bar {
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    height: 45px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.listIcon {
+    height: 45px;
+    width: 45px;
+    background-color: black;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listIcon:hover {
+    cursor: pointer;
+    background-color: var(--mainRedLight);
+}
+
+.listIcon i {
+    font-size: 28px;
+}
+
+.loginRegister {
+    cursor: pointer;
+    padding: 0px 10px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: var(--mainRedDark);
+    transition: .3s;
+}
+
+.loginRegister:hover {
+    background-color: var(--mainRedLight);
+}
+
+.loginRegister span {
+    color: white;
+    font-weight: 600;
+}
+
+.repLogo {
+    /* box-shadow: 5px 5px 5px black; */
+    position: relative;
+    left: 100px;
+    top: 35vh;
+    width: 700px;
+    height: auto;
+}
+
+.imageslider {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top: 320px;
+}
+
+.imageslider .slide {
+    position: absolute;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 300px;
+    /* clip-path: circle(0% at 0 50%); */
+    opacity: 0;
+}
+
+.imageslider .slide.active {
+    /* clip-path: circle(150% at 0 50%); */
+    transition: 2s;
+    opacity: 100;
+}
+
+.slide img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.navigation {
+    position: absolute;
+    top: 300px;
+    background-color: rgb(0, 0, 0);
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    color: black;
+    border: 1px solid rgb(177, 0, 0);
+    width: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn.active {
+    border: 1px solid rgb(255, 0, 0);
+    box-shadow: 1px 1px 5px red;
+}
+
+.myprofile {
+    height: 80px;
+    width: 100%;
+    background-color: rgb(90, 13, 13);
+    color: white;
+    position: relative;
+    top: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+
+.myprofile a {
+    text-decoration: none;
+    color: white;
+}
+
+.myprofiletext {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.myprofiletext h2 {
+    font-family: "Share Tech", sans-serif;
+}
+
+.myprofile p {
+    font-family: "Share Tech", sans-serif;
+    font-size: 18px;
+}
+
+.profilebutton {
+    border: 1px solid white;
+    height: 35px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.profilebutton:hover {
+    background-color: rgb(56, 56, 56);
+}
+
+/* News section  */
+
+.newssection {
+    /* border: 2px solid red; */
+    height: 700px;
+    width: 100%;
+    position: relative;
+    top: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.newssection h2 {
+    color: white;
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 62px;
+    align-self: flex-start;
+    margin-left: 50px;
+    margin-bottom: 70px;
+}
+
+.newsitemholder {
+    height: 400px;
+    width: 90%;
+    /* border: 2px solid pink; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item {
+    height: 90%;
+    width: 22%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.item a:hover {
+    text-decoration: underline;
+}
+
+.item a p {
+    margin-top: 15px;
+    width: 240px;
+    font-family: "Share Tech", sans-serif;
+}
+
+.item span {
+    font-size: 14px;
+    color: white;
+    font-family: "Share Tech", sans-serif;
+}
+
+
+.item span p {
+    font-size: 14px;
+    display: inline;
+    color: red;
+    font-family: "Share Tech", sans-serif;
+
+}
+
+.itemimage {
+    height: 240px;
+    width: 265px;
+    overflow: hidden;
+    /* border: 3px solid black; */
+}
+
+.itemimage img {
+    height: 240px;
+    width: auto;
+    display: block;
+    object-position: center center;
+    transition: transform .3s;
+}
+
+.itemimage:hover img {
+    transform: scale(1.2);
+}
+
+.newsmoreholder {
+    height: 40px;
+    width: 90%;
+}
+
+.newsmoreholder a {
+    text-decoration: none;
+}
+
+.newsmorebtn {
+    height: 40px;
+    width: 180px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 0, 0);
+    font-family: "Share Tech", sans-serif;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.newsmorebtn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.200);
+}
