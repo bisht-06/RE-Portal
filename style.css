@@ -1,6 +1,7 @@
 :root {
     --mainRedLight: rgb(212, 14, 14);
     --mainRedDark: rgb(146, 10, 10);
+    --mainFont : "Share Tech", sans-serif;
 }
 
 * {
@@ -53,7 +54,7 @@
 
 .nav-bar {
     z-index: 10;
-    position: sticky;
+    position: fixed;
     top: 0;
     height: 45px;
     width: 100%;
@@ -234,7 +235,7 @@
     letter-spacing: 2px;
     font-size: 62px;
     align-self: flex-start;
-    margin-left: 50px;
+    margin-left: 100px;
     margin-bottom: 70px;
 }
 
@@ -314,7 +315,7 @@
     text-decoration: none;
 }
 
-.newsmorebtn {
+.morebutton {
     height: 40px;
     width: 180px;
     border: 1px solid red;
@@ -327,7 +328,50 @@
     transition: .3s;
 }
 
-.newsmorebtn:hover {
+.morebutton:hover {
     cursor: pointer;
     background-color: rgba(255, 0, 0, 0.200);
 }
+
+.historysection {
+    /* border: 2px solid red; */
+    height: 600px;
+    width: 100%;
+    top: 700px;
+    position: absolute;
+    background-image: url(./Assets/Images/historysection.png) ;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+
+.historytext {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 40%;
+    margin-left: 100px;
+}
+
+.historytext h3 {
+    color: white;
+    font-size: 62px;
+    font-family: var(--mainFont);
+    letter-spacing: 3px;
+}
+
+.historytext p {
+    color: white;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    word-spacing: 5px;
+    font-weight: 100;
+}
+
+
+
+
+
