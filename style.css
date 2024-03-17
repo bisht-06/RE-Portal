@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
 }
 
 /* .scroollogo {
@@ -353,7 +354,7 @@
     gap: 10px;
     position: absolute;
     top: 40%;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .historytext h3 {
@@ -364,7 +365,7 @@
 }
 
 .historytext p {
-    color: white;
+    color: rgb(199, 199, 199);
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
     word-spacing: 5px;
