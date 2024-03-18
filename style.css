@@ -4,8 +4,9 @@
 }
 
 :root {
-    --darkred : #970911;
-    --lightred : rgba(253, 0 , 0, 1);
+    --darkred: #970911;
+    --lightred: rgba(253, 0, 0, 1);
+    font-family: oswald;
 }
 
 * {
@@ -26,6 +27,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
 }
 
 .menu-icon {
@@ -41,7 +43,7 @@ nav {
     transition: .3s;
 }
 
-.menu-icon:hover{
+.menu-icon:hover {
     background-color: var(--lightred);
 }
 
@@ -57,7 +59,6 @@ nav {
     gap: 5px;
     font-family: oswald;
     transition: .3s;
-
 }
 
 .login-button i {
@@ -83,6 +84,7 @@ nav {
         height: auto;
     }
 }
+
 @media (max-aspect-ratio : 16/9) {
     .bgvideo {
         width: auto;
@@ -90,14 +92,130 @@ nav {
     }
 }
 
+.topsection {
+    position: relative;
+    /* z-index: 1000; */
+    top: 45px;
+    /* border: 5px solid white; */
+    height: 480px;
+    width: 100%;
+}
+
 .REPmainText {
     position: absolute;
     /* border: 2px solid green; */
-    height: 12vw;
+    height: 120px;
     width: 50vw;
     background-image: url(./Assets/Images/reportallogo.png);
     background-size: contain;
     background-repeat: no-repeat;
-    top: 260px;
+    top: 360px;
     margin-left: 80px;
+}
+
+.backgroundselect {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: -70px;
+    transform: rotate(90deg);
+    top: 120px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.backgroundselect:hover {
+    transition: .2s;
+    color: #bbbbbb;
+}
+
+.backgroundselect:hover img {
+    filter: brightness(80%);
+    transition: .2s;
+}
+
+.scroll {
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -30px;
+    bottom: 80px;
+}
+
+.scroll-line {
+    width: 80px;
+    height: 1px;
+    background-color: rgb(54, 54, 54);
+    overflow: hidden;
+}
+
+.redline {
+    position: relative;
+    width: 50px;
+    height: 1px;
+    background-color: red;
+    animation-name: scroll-line;
+    animation-duration: 1.5s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll-line {
+    0% {
+        left: -50px;
+    }
+
+    100% {
+        left: 80px;
+    }
+}
+
+/* slider section  */
+
+.slidersection {
+    position: absolute;
+    min-height: 70vh;
+    width: 100%;
+    /* border: 2px solid aqua; */
+    top: calc(360px + 12vw);
+}
+
+.bgmovie {
+    position: absolute;
+    left: 50px;
+    color: white;
+    font-family: oswald;
+    transition: .3s;
+}
+
+
+.bgmovie:hover img {
+    filter: brightness(80%);
+}
+
+.bgmovie:hover a {
+    color: #bbbbbb;
+}
+
+.bgmovie a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.playicon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }

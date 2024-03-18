@@ -12,7 +12,7 @@
 
 .login-button i {
     font-size: 16px;
-} 
+}
 
 .bgvideo {
     position: fixed;
@@ -24,8 +24,37 @@
 .REPmainText {
     background-position: center center;
     /* border: 1px solid white; */
-    top: 90px ;
+    top: 90px;
     left: -70px;
     width: 250px;
     height: 100px;
+}
+
+.backgroundselect {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    right: -40px;
+    transform: rotate(90deg);
+    top: 80px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.bgmovie {
+    position: absolute;
+    left: 50px;
+    color: white;
+    font-family: oswald;
+}
+
+
+.bgmovie a {
+    font-size: 12px;
+}
+
+.scroll {
+    display: none;
 }
