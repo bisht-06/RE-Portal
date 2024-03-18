@@ -1,0 +1,31 @@
+.login-button {
+    height: 100%;
+    background-color: var(--darkred);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    color: white;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.login-button i {
+    font-size: 16px;
+} 
+
+.bgvideo {
+    position: fixed;
+    top: 45px;
+    z-index: -100;
+    left: -450px;
+}
+
+.REPmainText {
+    background-position: center center;
+    /* border: 1px solid white; */
+    top: 90px ;
+    left: -70px;
+    width: 250px;
+    height: 100px;
+}

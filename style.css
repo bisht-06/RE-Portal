@@ -1,0 +1,103 @@
+@font-face {
+    font-family: oswald;
+    src: url(./Assets/Fonts/Oswald-Regular.ttf);
+}
+
+:root {
+    --darkred : #970911;
+    --lightred : rgba(253, 0 , 0, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    height: 45px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-icon {
+    height: 100%;
+    width: 50px;
+    /* background-color: #970911; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.menu-icon:hover{
+    background-color: var(--lightred);
+}
+
+.login-button {
+    cursor: pointer;
+    height: 100%;
+    background-color: var(--darkred);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px;
+    color: white;
+    gap: 5px;
+    font-family: oswald;
+    transition: .3s;
+
+}
+
+.login-button i {
+    font-size: 20px;
+}
+
+.login-button:hover {
+    background-color: var(--lightred);
+}
+
+.bgvideo {
+    position: fixed;
+    top: 45px;
+    z-index: -100;
+    right: 0;
+    bottom: 0;
+    filter: brightness(50%);
+}
+
+@media (min-aspect-ratio : 16/9) {
+    .bgvideo {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio : 16/9) {
+    .bgvideo {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.REPmainText {
+    position: absolute;
+    /* border: 2px solid green; */
+    height: 12vw;
+    width: 50vw;
+    background-image: url(./Assets/Images/reportallogo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 260px;
+    margin-left: 80px;
+}
